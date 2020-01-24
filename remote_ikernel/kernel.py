@@ -480,7 +480,7 @@ class RemoteIKernel(object):
         # to work seamlessly. (tunnels will have already done this)
         pre = self.tunnel_hosts_cmd or ''
 
-        if ':' in self.host:
+        if str(':') in str(self.host):
             host = self.host.replace(':', ' -p ')
         else:
             host = self.host
